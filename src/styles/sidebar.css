@@ -1,0 +1,123 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: var(--primary-color); /* Dark Blue */
+  padding: 20px;
+  color: var(--text-color); /* Orange Text Color */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: var(--header-font-size);
+  margin-bottom: 20px;
+  color: var(--accent-color); /* Yellow for title */
+  font-weight: 600;
+  text-align: center;
+}
+
+.sidebar .profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 15px auto;
+  display: block;
+  border: 2px solid var(--secondary-color); /* Light Blue border */
+}
+
+.sidebar-text {
+  font-size: var(--small-font-size);
+  margin: 5px 0;
+  color: var(--text-color); /* Orange Text Color */
+  text-align: center;
+}
+
+.sidebar .profile-info p {
+  font-size: var(--small-font-size);
+  margin: 5px 0;
+  color: var(--accent-color); /* Yellow for profile info */
+  text-align: center;
+}
+
+.date-item {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--secondary-color); /* Dark Blue */
+  color: var(--primary-color); /* Yellow Text */
+  font-size: var(--body-font-size);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.date-item:hover {
+  background-color: #edf2f4; /* Light Gray on hover */
+  color: var(--primary-color); /* Dark Blue Text */
+}
+
+.sidebar .date-item.selected {
+  background-color: var(--accent-color); /* Yellow for selected item */
+  color: var(--primary-color) !important; /* Dark Blue Text for selected item */
+  font-weight: bold;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  padding: 10px;
+  background-color: var(--secondary-color); /* Light Blue */
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: var(--body-font-size);
+  color: var(--primary-color); /* Dark Blue Text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--primary-color); /* Dark Blue on hover */
+  color: var(--accent-color); /* Yellow Text on hover */
+}
+
+.dropdown-menu {
+  margin-top: 1px;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color); /* Light Blue */
+}
+
+.dropdown-menu .date-item {
+  padding: 10px;
+  color: #edf2f4; /* Dark Blue Text */
+  margin-bottom: 1px;
+  font-size: var(--body-font-size);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .date-item:hover {
+  background-color: #edf2f4; /* Light Blue on hover */
+  color: var(--primary-color); /* Dark Blue Text on hover */
+}
+
+.logout-button {
+  background-color: #fb8500; /* Orange Background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: var(--border-radius);
+  font-size: var(--body-font-size);
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Slightly darker red on hover */
+}

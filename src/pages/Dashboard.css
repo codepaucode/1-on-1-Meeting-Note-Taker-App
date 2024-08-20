@@ -1,0 +1,130 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  box-sizing: border-box;
+  
+}
+
+.dashboard-content {
+  flex-grow: 1;
+  padding: 60px;
+  background-color: #edf2f4;
+  overflow-y: auto;
+  margin-right: 290px; /* Right sidebar width */
+  width: calc(100% - 500px); /* Subtract both sidebars from full width */
+  border-radius: 5px;
+}
+
+.left-sidebar {
+  width: 250px;
+  background-color: #023047;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.right-sidebar {
+  width: 250px;
+  background-color: #023047;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1000;
+}
+
+/* Date section styles */
+.date-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.date-and-delete-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.date-and-delete-container label {
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+
+input[type="date"] {
+  margin-right: auto;
+  padding: 5px;
+  font-size: var(--body-font-size);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--accent-color);
+}
+
+/* Button styles */
+.delete-meeting-button {
+  background-color: #fb8500;
+  width: 150px;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-meeting-button:hover {
+  background-color: #c0392b;
+}
+
+.save-meeting-button {
+  background-color: var(--primary-color); /* Dark Blue */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  font-size: var(--body-font-size);
+  font-family: 'Inter', sans-serif;
+}
+
+.save-meeting-button:hover {
+  background-color: var(--secondary-color); /* Light Blue on hover */
+}
+
+/* Sections */
+.meeting-template-section,
+.meeting-notes-section,
+.action-items-section,
+.meeting-summary-section {
+  margin-top: 20px;
+  font-size: var(--body-font-size);
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  font-size:10px;
+  color: var(--muted-text-color);
+  margin-top: 50px;
+  padding: 10px 0;
+  color: #ffffff;
+  border-top: 1px solid #8ecae6;
+}

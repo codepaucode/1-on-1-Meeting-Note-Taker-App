@@ -1,0 +1,47 @@
+/* General Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #8ecae6; /* Light Blue Background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  margin-left: 250px; /* Sidebar width */
+  width: calc(100% - 250px); /* Take up remaining space after the sidebar */
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't add to the width */
+  background-image: url('/background-image.png'); /* Path to your image */
+  background-size: cover; /* This makes sure the image covers the entire background */
+  background-position:left; /* This centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #023047; /* Dark Blue */
+  color: #fff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding doesn't add to the width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .dashboard-container {
+    margin-left: 0;
+    width: 100%;
+  }
+}

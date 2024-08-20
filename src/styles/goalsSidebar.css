@@ -1,0 +1,61 @@
+.goals-sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-color); /* Dark Blue */
+    padding: 20px;
+    color: var(--text-color); /* Orange Text Color */
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  
+  .goals-sidebar h3 {
+    font-size: var(--header-font-size);
+    color: var(--accent-color); /* Yellow */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .goals-section {
+    margin-bottom: 20px;
+  }
+  
+  .goals-section label {
+    font-size: var(--body-font-size);
+    color: var(--accent-color); /* Yellow */
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .goals-sidebar textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--accent-color);
+    background-color: #ffffff;
+    color: var(--primary-color);
+    height: 200px;
+    resize: vertical;
+    font-family: 'Inter', sans-serif;
+    font-size: var(--body-font-size);
+  }
+  
+  .save-goals-button {
+    background-color: var(--secondary-color); /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: var(--body-font-size);
+  }
+  
+  .save-goals-button:hover {
+    background-color: var(--accent-color); /* Yellow on hover */
+  }
+  

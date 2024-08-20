@@ -1,0 +1,76 @@
+.meeting-summary {
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.meeting-summary h2 {
+  color: var(--primary-color); /* Dark Blue */
+  margin-bottom: 20px;
+  font-size: var(--header-font-size);
+}
+
+.meeting-summary button {
+  background-color: var(--primary-color); /* Dark Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--body-font-size);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.meeting-summary button:disabled {
+  background-color: #ccc; /* Grey when disabled */
+  cursor: not-allowed;
+}
+
+.meeting-summary button:hover:enabled {
+  background-color: var(--secondary-color); /* Light Blue when hovered */
+}
+
+.meeting-summary .form-group {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 10px; /* Space between the email field and the button */
+}
+
+.meeting-summary textarea {
+  width: 100%;
+  padding: 10px;
+  min-height: 300px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--accent-color); /* Yellow Border */
+  background-color: #ffffff; /* White Background */
+  color: var(--primary-color); /* Dark Blue */
+  resize: vertical; /* Allow vertical resizing */
+  font-family: 'Inter', sans-serif;
+  font-size: var(--body-font-size);
+}
+
+
+input[type="email"] {
+  padding: 10px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--accent-color); /* Yellow Border */
+  background-color: #ffffff; /* White Background */
+  color: var(--primary-color); /* Dark Blue */
+  height: 40px; /* Ensures the height matches the button */
+  box-sizing: border-box; /* Ensures padding does not affect the height */
+  width: 200px;
+  font-family: 'Inter', sans-serif;
+  font-size: var(--body-font-size);
+}
+
+.form-group button {
+  padding: 10px 20px; /* Adjust padding for consistent sizing */
+  height: 40px; /* Ensures the height matches the input field */
+  font-family: 'Inter', sans-serif;
+  font-size: var(--body-font-size);
+  width: 150px;
+}
+
+button:hover {
+  background-color: var(--secondary-color); /* Light Blue */
+}
