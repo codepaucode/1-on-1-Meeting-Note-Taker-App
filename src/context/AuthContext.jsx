@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { auth } from "../services/firebase";
 
-const AuthContext = createContext();
+// Create the context for authentication (a way to pass data through the component tree without having to pass props down manually at every level).
+const AuthContext = createContext(); //to manage and share authentication-related data across the app
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext); //useAuth is the access point for other components to get AuthContext.
 
-export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [loading, setLoading] = useState(true);
+export const AuthProvider = ({ children }) => { //AuthProvider component provides the AuthContext value to all its children components.
+  const [currentUser, setCurrentUser] = useState(null); // Holds the authenticated user
+  const [loading, setLoading] = useState(true); // Loading state for auth
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -15,9 +16,10 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
     });
 
-    return () => unsubscribe();
+    return () => unsubscribe(); // Cleanup on unmount
   }, []);
 
+  // Logout function
   const logout = async () => {
     try {
       await auth.signOut();

@@ -1,3 +1,4 @@
+/* Container for the entire sidebar */
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -9,6 +10,7 @@
   flex-direction: column;
 }
 
+/* Title styling for the sidebar */
 .sidebar-title {
   font-size: var(--header-font-size);
   margin-bottom: 20px;
@@ -17,6 +19,7 @@
   text-align: center;
 }
 
+/* Profile image styling */
 .sidebar .profile-image {
   width: 80px;
   height: 80px;
@@ -26,6 +29,7 @@
   border: 2px solid var(--secondary-color); /* Light Blue border */
 }
 
+/* Text styling within the sidebar */
 .sidebar-text {
   font-size: var(--small-font-size);
   margin: 5px 0;
@@ -33,6 +37,7 @@
   text-align: center;
 }
 
+/* Styling for profile info paragraphs */
 .sidebar .profile-info p {
   font-size: var(--small-font-size);
   margin: 5px 0;
@@ -40,6 +45,7 @@
   text-align: center;
 }
 
+/* Date item styling within the sidebar */
 .date-item {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -53,23 +59,27 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Hover state for date items */
 .date-item:hover {
   background-color: #edf2f4; /* Light Gray on hover */
   color: var(--primary-color); /* Dark Blue Text */
 }
 
+/* Styling for selected date items */
 .sidebar .date-item.selected {
   background-color: var(--accent-color); /* Yellow for selected item */
   color: var(--primary-color) !important; /* Dark Blue Text for selected item */
   font-weight: bold;
 }
 
+/* Container for the dropdown menu */
 .dropdown {
   margin-bottom: 30px;
   flex-grow: 1;
   overflow-y: auto;
 }
 
+/* Toggle button for the dropdown menu */
 .dropdown-toggle {
   cursor: pointer;
   padding: 10px;
@@ -81,17 +91,20 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover state for the dropdown toggle */
 .dropdown-toggle:hover {
-  background-color: #edf2f4;; /* Dark Blue on hover */
-  color: var(--primary-color); /* Yellow Text on hover */
+  background-color: #edf2f4; /* Light Blue on hover */
+  color: var(--primary-color); /* Dark Blue Text on hover */
 }
 
+/* Styling for the dropdown menu */
 .dropdown-menu {
   margin-top: 1px;
   border-radius: var(--border-radius);
   background-color: var(--secondary-color); /* Light Blue */
 }
 
+/* Date item styling within the dropdown menu */
 .dropdown-menu .date-item {
   padding: 10px;
   color: #edf2f4; /* Dark Blue Text */
@@ -99,11 +112,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Hover state for dropdown menu items */
 .dropdown-menu .date-item:hover {
   background-color: #edf2f4; /* Light Blue on hover */
   color: var(--primary-color); /* Dark Blue Text on hover */
 }
 
+/* Logout button styling */
 .logout-button {
   background-color: #fb8500; /* Orange Background */
   color: white;
@@ -117,6 +132,7 @@
   transition: background-color 0.3s ease;
 }
 
+/* Hover state for the logout button */
 .logout-button:hover {
   background-color: #c0392b; /* Slightly darker red on hover */
 }

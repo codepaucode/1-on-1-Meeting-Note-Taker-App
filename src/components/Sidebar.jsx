@@ -6,10 +6,12 @@ const Sidebar = ({ savedMeetings = {}, onDateClick, selectedDate, handleHomeClic
   const { logout, currentUser } = useAuth();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Toggles the visibility of the dropdown
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Handles the logout action
   const handleLogoutClick = async () => {
     try {
       await logout();
@@ -29,6 +31,7 @@ const Sidebar = ({ savedMeetings = {}, onDateClick, selectedDate, handleHomeClic
         </div>
       </header>
 
+      {/* Home button */}
       <div
         className={`date-item ${selectedDate === '' ? 'selected' : ''}`}
         onClick={handleHomeClick}
@@ -36,6 +39,7 @@ const Sidebar = ({ savedMeetings = {}, onDateClick, selectedDate, handleHomeClic
         Home
       </div>
 
+      {/* Dropdown for saved meetings */}
       <div className="dropdown">
         <div className="dropdown-toggle" onClick={toggleDropdown}>
           Saved Meeting Notes

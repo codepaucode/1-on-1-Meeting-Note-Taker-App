@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import './ActionItems.css';
 
 const ActionItems = ({ actionItems, setActionItems, isInputDisabled }) => {
-  const [newItem, setNewItem] = useState("");
+  const [newItemText, setNewItemText] = useState("");
 
   const handleAddItem = () => {
     if (isInputDisabled) {
-      alert("Please select a date first.");
+      alert("Please select a date first."); // Guard against adding items without a selected date
       return;
     }
-    if (newItem.trim()) {
-      setActionItems([...actionItems, { text: newItem, completed: false }]);
-      setNewItem(""); // Clear input after adding
+    if (newItemText.trim()) {
+      // Add a new item to the actionItems array
+      setActionItems([...actionItems, { text: newItemText, completed: false }]);
+      setNewItemText(""); // Clear input after adding
     }
   };
 
@@ -20,6 +21,7 @@ const ActionItems = ({ actionItems, setActionItems, isInputDisabled }) => {
       alert("Please select a date first.");
       return;
     }
+    // Toggle the completion status of the item
     const updatedItems = actionItems.map((item, i) => (
       i === index ? { ...item, completed: !item.completed } : item
     ));
@@ -31,6 +33,7 @@ const ActionItems = ({ actionItems, setActionItems, isInputDisabled }) => {
       alert("Please select a date first.");
       return;
     }
+    // Remove the item from the actionItems array
     const updatedItems = actionItems.filter((_, i) => i !== index);
     setActionItems(updatedItems);
   };
@@ -40,6 +43,7 @@ const ActionItems = ({ actionItems, setActionItems, isInputDisabled }) => {
       alert("Please select a date first.");
       return;
     }
+    // Update the text of the item
     const updatedItems = actionItems.map((item, i) => (
       i === index ? { ...item, text: e.target.value } : item
     ));
@@ -78,8 +82,8 @@ const ActionItems = ({ actionItems, setActionItems, isInputDisabled }) => {
       <div className="add-item-container">
         <input
           type="text"
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
+          value={newItemText}
+          onChange={(e) => setNewItemText(e.target.value)}
           onClick={() => {
             if (isInputDisabled) {
               alert("Please select a date first.");

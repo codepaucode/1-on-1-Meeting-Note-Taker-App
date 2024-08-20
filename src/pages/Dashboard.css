@@ -1,10 +1,11 @@
+/* Container for the entire dashboard */
 .dashboard-container {
   display: flex;
   height: 100vh;
   box-sizing: border-box;
-  
 }
 
+/* Main content area of the dashboard */
 .dashboard-content {
   flex-grow: 1;
   padding: 60px;
@@ -15,6 +16,7 @@
   border-radius: 5px;
 }
 
+/* Left sidebar styling */
 .left-sidebar {
   width: 250px;
   background-color: #023047;
@@ -31,6 +33,7 @@
   z-index: 1000;
 }
 
+/* Right sidebar styling */
 .right-sidebar {
   width: 250px;
   background-color: #023047;
@@ -46,13 +49,14 @@
   z-index: 1000;
 }
 
-/* Date section styles */
+/* Styling for the date section in the dashboard */
 .date-section {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
+/* Container for the date and delete button */
 .date-and-delete-container {
   display: flex;
   align-items: center;
@@ -61,12 +65,14 @@
   width: 100%;
 }
 
+/* Label styling for the date input */
 .date-and-delete-container label {
   margin-right: 5px;
   font-weight: bold;
   font-size: large;
 }
 
+/* Input field for the date */
 input[type="date"] {
   margin-right: auto;
   padding: 5px;
@@ -75,7 +81,7 @@ input[type="date"] {
   border: 1px solid var(--accent-color);
 }
 
-/* Button styles */
+/* Button for deleting a meeting */
 .delete-meeting-button {
   background-color: #fb8500;
   width: 150px;
@@ -86,10 +92,12 @@ input[type="date"] {
   cursor: pointer;
 }
 
+/* Hover state for the delete button */
 .delete-meeting-button:hover {
   background-color: #c0392b;
 }
 
+/* Button for saving a meeting */
 .save-meeting-button {
   background-color: var(--primary-color); /* Dark Blue */
   color: white;
@@ -103,11 +111,12 @@ input[type="date"] {
   font-family: 'Inter', sans-serif;
 }
 
+/* Hover state for the save button */
 .save-meeting-button:hover {
   background-color: var(--secondary-color); /* Light Blue on hover */
 }
 
-/* Sections */
+/* Sections for the different parts of the dashboard */
 .meeting-template-section,
 .meeting-notes-section,
 .action-items-section,
@@ -118,10 +127,10 @@ input[type="date"] {
   font-family: 'Inter', sans-serif;
 }
 
-/* Footer */
+/* Footer styling for the dashboard */
 .dashboard-footer {
   text-align: center;
-  font-size:10px;
+  font-size: 10px;
   color: var(--muted-text-color);
   margin-top: 50px;
   padding: 10px 0;

@@ -5,10 +5,10 @@ const MeetingNotes = ({ notes, setNotes, isInputDisabled }) => {
 
   const handleNotesChange = (e) => {
     if (isInputDisabled) {
-      alert("Please select a date first.");
+      alert("Please select a date first."); // Prevent changes when input is disabled
       return;
     }
-    setNotes(e.target.value);
+    setNotes(e.target.value); // Update notes with the current input value
   };
 
   return (

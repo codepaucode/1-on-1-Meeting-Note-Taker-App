@@ -1,4 +1,4 @@
-/* General Layout */
+/* Basic styling for the body */
 body {
   font-family: Arial, sans-serif;
   background-color: #8ecae6; /* Light Blue Background */
@@ -7,6 +7,7 @@ body {
   padding: 0;
 }
 
+/* Container for the dashboard area, including content and sidebars */
 .dashboard-container {
   margin-left: 250px; /* Sidebar width */
   width: calc(100% - 250px); /* Take up remaining space after the sidebar */
@@ -14,11 +15,11 @@ body {
   box-sizing: border-box; /* Ensure padding doesn't add to the width */
   background-image: url('/background-image.png'); /* Path to your image */
   background-size: cover; /* This makes sure the image covers the entire background */
-  background-position:left; /* This centers the background image */
+  background-position: left; /* This centers the background image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-/* Sidebar */
+/* Sidebar styling */
 .sidebar {
   position: fixed;
   top: 0;
@@ -32,7 +33,7 @@ body {
   box-sizing: border-box; /* Ensure padding doesn't add to the width */
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;

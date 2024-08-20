@@ -1,3 +1,4 @@
+/* Container for the entire action items section */
 .action-items-container {
   padding: 20px;
   background-color: #8ecae6; /* Light Blue */
@@ -7,18 +8,21 @@
   margin: 0 auto;
 }
 
+/* Heading for the action items section */
 h2 {
   font-size: var(--header-font-size);
   color: var(--primary-color); /* Dark Blue */
   margin-top: 10px;
   margin-bottom: 30px;
-  text-align:start;
+  text-align: start;
 }
 
+/* Container for each action item section */
 .action-section {
   margin-bottom: 20px;
 }
 
+/* Subheading for each action item section */
 .action-section h3 {
   font-size: var(--body-font-size);
   color: var(--primary-color);
@@ -28,6 +32,7 @@ h2 {
   align-items: center;
 }
 
+/* List of action items */
 .action-items-list {
   list-style-type: none;
   padding: 0;
@@ -35,6 +40,7 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Styling for each action item in the list */
 .action-items-list li {
   margin-bottom: 10px;
   background-color: var(--background-color); /* Light Blue */
@@ -46,6 +52,7 @@ h2 {
   justify-content: space-between;
 }
 
+/* Container for inputs within each action item */
 .input-container {
   display: flex;
   align-items: center;
@@ -53,6 +60,7 @@ h2 {
   width: 100%;
 }
 
+/* Input field for editing action items */
 .edit-input {
   flex-grow: 1;
   padding: 8px;
@@ -63,6 +71,7 @@ h2 {
   background-color: #ffffff; /* White Background */
 }
 
+/* Button for removing an action item */
 .remove-item-button {
   background-color: var(--primary-color); /* Dark Blue */
   color: white;
@@ -80,10 +89,12 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+/* Hover state for the remove button */
 .remove-item-button:hover {
   background-color: var(--secondary-color); /* Light Blue */
 }
 
+/* Button for adding a new action item */
 .add-item-button {
   background-color: var(--background-color); /* Light Blue Background */
   color: var(--text-color); /* Orange Text */
@@ -99,6 +110,7 @@ h2 {
   transition: background-color 0.3s ease;
 }
 
+/* Hover state for the add button */
 .add-item-button:hover {
   background-color: var(--accent-color); /* Yellow Background */
   color: #ffffff; /* White Text */

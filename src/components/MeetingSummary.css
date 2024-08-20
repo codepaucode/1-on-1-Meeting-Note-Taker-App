@@ -1,14 +1,17 @@
+/* Container for the entire meeting summary section */
 .meeting-summary {
   margin-top: 20px;
   font-family: 'Inter', sans-serif;
 }
 
+/* Heading for the meeting summary section */
 .meeting-summary h2 {
   color: var(--primary-color); /* Dark Blue */
   margin-bottom: 20px;
   font-size: var(--header-font-size);
 }
 
+/* Button for generating and sending the meeting summary */
 .meeting-summary button {
   background-color: var(--primary-color); /* Dark Blue */
   color: white;
@@ -21,21 +24,25 @@
   margin-bottom: 20px;
 }
 
+/* Disabled state for the summary button */
 .meeting-summary button:disabled {
   background-color: #ccc; /* Grey when disabled */
   cursor: not-allowed;
 }
 
+/* Hover state for the summary button when enabled */
 .meeting-summary button:hover:enabled {
   background-color: var(--secondary-color); /* Light Blue when hovered */
 }
 
+/* Container for the email form and input fields */
 .meeting-summary .form-group {
   display: flex;
-  align-items: center; /* Ensures vertical alignment */
+  align-items: center; 
   gap: 10px; /* Space between the email field and the button */
 }
 
+/* Styling for the textarea used for editing the meeting summary */
 .meeting-summary textarea {
   width: 100%;
   padding: 10px;
@@ -44,33 +51,35 @@
   border: 1px solid var(--accent-color); /* Yellow Border */
   background-color: #ffffff; /* White Background */
   color: var(--primary-color); /* Dark Blue */
-  resize: vertical; /* Allow vertical resizing */
+  resize: vertical; 
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
 }
 
-
+/* Styling for the email input field */
 input[type="email"] {
   padding: 10px;
   border-radius: var(--border-radius);
   border: 1px solid var(--accent-color); /* Yellow Border */
   background-color: #ffffff; /* White Background */
   color: var(--primary-color); /* Dark Blue */
-  height: 40px; /* Ensures the height matches the button */
-  box-sizing: border-box; /* Ensures padding does not affect the height */
+  height: 40px; 
+  box-sizing: border-box; 
   width: 200px;
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
 }
 
+/* Styling for the button in the email form */
 .form-group button {
-  padding: 10px 20px; /* Adjust padding for consistent sizing */
-  height: 40px; /* Ensures the height matches the input field */
+  padding: 10px 20px; 
+  height: 40px; 
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
   width: 150px;
 }
 
+/* General button hover state */
 button:hover {
   background-color: var(--secondary-color); /* Light Blue */
 }

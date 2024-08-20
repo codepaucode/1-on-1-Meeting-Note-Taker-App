@@ -5,24 +5,24 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { AuthProvider } from "./context/AuthContext";
 import { MeetingProvider } from './context/MeetingContext';
-import './styles/theme.css';  // Import theme
-import './styles/styles.css'; // Import global styles
+import './styles/theme.css';  // Import global theme styles
+import './styles/styles.css'; // Import additional global styles
 
 function App() {
   return (
-    <AuthProvider>
-      <MeetingProvider>
+    <AuthProvider> {/* Provide authentication context to the entire app */}
+      <MeetingProvider> {/* Provide meeting-related context to the entire app */}
         <Router>
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route 
               path="/" 
-              element={<Navigate to="/login" />} // Redirect to login by default
+              element={<Navigate to="/login" />} // Redirect root path to login
             />
             <Route 
               path="/dashboard" 
               element={
-                <ProtectedRoute>
+                <ProtectedRoute> {/* Protect the dashboard route */}
                   <Dashboard />
                 </ProtectedRoute>
               } 
