@@ -7,6 +7,7 @@ export const MeetingProvider = ({ children }) => {
   const [selectedCategory, setSelectedCategory] = useState(''); // Selected guide question category
   const [meetingNotes, setMeetingNotes] = useState(''); // Meeting notes content
   const [actionItems, setActionItems] = useState([]); // List of action items
+  const [summary, setSummary] = useState(''); // Meeting summary content
 
   return (
     <MeetingContext.Provider value={{
@@ -16,6 +17,8 @@ export const MeetingProvider = ({ children }) => {
       setMeetingNotes,
       actionItems,
       setActionItems,
+      summary,
+      setSummary,
     }}>
       {children}
     </MeetingContext.Provider>

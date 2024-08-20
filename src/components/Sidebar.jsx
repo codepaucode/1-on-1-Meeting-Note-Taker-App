@@ -43,7 +43,7 @@ const Sidebar = ({ savedMeetings = {}, onDateClick, selectedDate, handleHomeClic
       <div className="dropdown">
         <div className="dropdown-toggle" onClick={toggleDropdown}>
           Saved Meeting Notes
-        </div>
+        </div>     
         {isDropdownOpen && (
           <div className="dropdown-menu">
             {Object.keys(savedMeetings).map((date) => (

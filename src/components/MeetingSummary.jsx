@@ -10,9 +10,17 @@ const MeetingSummary = ({ meetingNotes, actionItems, setSummary, userName, meeti
   const [errorMessage, setErrorMessage] = useState(''); // Error message state
   const { currentUser } = useAuth(); // Get current user from auth context
 
+  // Synchronize the local summary with the initial summary whenever it changes
   useEffect(() => {
-    setLocalSummary(initialSummary || ''); // Reset the summary when the initial summary changes
-  }, [initialSummary]);
+    setLocalSummary(initialSummary || ''); // Reset the summary when the initial summary or meeting date changes
+  }, [initialSummary, meetingDate]);
+
+  // Function to handle summary text change
+  const handleSummaryChange = (e) => {
+    const updatedSummary = e.target.value;
+    setLocalSummary(updatedSummary); // Update local state
+    setSummary(updatedSummary); // Propagate changes to the parent component
+  };
 
   // Handle click for the summary generation button
   const handleClick = () => {
@@ -39,7 +47,7 @@ const MeetingSummary = ({ meetingNotes, actionItems, setSummary, userName, meeti
         return;
       }
 
-    // Wait for summarized notes from API and then append Action Items and Date of Meeting for the final output of the summary generator
+      // Wait for summarized notes from API and then append Action Items and Date of Meeting for the final output of the summary generator
       const summarizedText = await summarizeText(notes);
 
       let actionItemsSummary = '';
@@ -53,7 +61,7 @@ const MeetingSummary = ({ meetingNotes, actionItems, setSummary, userName, meeti
       const finalSummary = `Date of the Meeting: ${meetingDate}\n\n${summarizedText}\n\n${actionItemsSummary}`;
 
       setLocalSummary(finalSummary); // Update local summary state
-      setSummary(finalSummary); // Update parent component's summary state
+      setSummary(finalSummary); // Propagate changes to the parent component
     } catch (error) {
       if (error.message === 'API limit reached') {
         setErrorMessage('You have reached the API limit. Please try again later.');
@@ -83,8 +91,7 @@ const MeetingSummary = ({ meetingNotes, actionItems, setSummary, userName, meeti
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const userId = import.meta.env.VITE_EMAILJS_USER_ID;
 
-
-    //cheking of email sending status
+    // Checking the status of the email sending
     emailjs.send(serviceId, templateId, templateParams, userId)
       .then((result) => {
         console.log(result.text);
@@ -99,14 +106,14 @@ const MeetingSummary = ({ meetingNotes, actionItems, setSummary, userName, meeti
     <div className="meeting-summary">
       <h2>Send Meeting Summary</h2>
       <button onClick={generateSummary} disabled={isLoading || isSummaryButtonDisabled}>
-        {isLoading ? 'Generating...' : 'Generate Summary'} 
+        {isLoading ? 'Generating...' : 'Generate Summary'}
       </button> 
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       <form onSubmit={sendEmail}>
         <textarea
           name="message"
           value={localSummary}
-          onChange={(e) => setLocalSummary(e.target.value)}
+          onChange={handleSummaryChange}
           onClick={handleClick}
           placeholder="Modify your meeting summary here"
         />
