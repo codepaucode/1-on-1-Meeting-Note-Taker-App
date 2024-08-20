@@ -34,7 +34,7 @@ const Login = () => {
       }}
     >
       <div className="login-box">
-        <h2>Welcome to the 1-on-1 Meeting Note-taking App</h2>
+        <h2>Welcome to the 1-on-1 Meeting Note Taker App</h2>
         <img src="/login-image.png" alt="Login Illustration" className="login-image" />
         <p>Please sign in with your Google account to continue.</p>
         <button onClick={handleGoogleSignIn} className="google-signin-button">
