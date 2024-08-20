@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from "../context/AuthContext";
-import '../styles/Sidebar.css';
+import '../styles/sidebar.css';
 
 const Sidebar = ({ savedMeetings = {}, onDateClick, selectedDate, handleHomeClick }) => {
   const { logout, currentUser } = useAuth();

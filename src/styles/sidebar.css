@@ -41,7 +41,7 @@
 }
 
 .date-item {
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
   text-align: center;
@@ -65,7 +65,7 @@
 }
 
 .dropdown {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   flex-grow: 1;
   overflow-y: auto;
 }
@@ -82,8 +82,8 @@
 }
 
 .dropdown-toggle:hover {
-  background-color: var(--primary-color); /* Dark Blue on hover */
-  color: var(--accent-color); /* Yellow Text on hover */
+  background-color: #edf2f4;; /* Dark Blue on hover */
+  color: var(--primary-color); /* Yellow Text on hover */
 }
 
 .dropdown-menu {
@@ -95,7 +95,6 @@
 .dropdown-menu .date-item {
   padding: 10px;
   color: #edf2f4; /* Dark Blue Text */
-  margin-bottom: 1px;
   font-size: var(--body-font-size);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
