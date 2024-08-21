@@ -1,1 +1,1 @@
-link to production: https://1o1notetaker.vercel.app/login
+link to production: https://1o1notetaker.vercel.app
