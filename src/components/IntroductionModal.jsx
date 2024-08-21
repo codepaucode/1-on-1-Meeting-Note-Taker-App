@@ -15,6 +15,7 @@ const IntroductionModal = ({ isOpen, onClose }) => {
           Drawing inspiration from Harvard Business Review’s research on twenty-eight essential questions for productive meetings, 
           our application empowers employees by integrating these questions into the meeting process.
         </p>
+        <h3>The App's Key Features:</h3>
         <ul>
           <li><strong>Select relevant questions:</strong> Choose from a set of carefully crafted questions to guide the conversation.</li>
           <li><strong>Document meeting notes:</strong> Keep a clear record of discussions and decisions.</li>
