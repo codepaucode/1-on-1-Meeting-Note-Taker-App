@@ -5,16 +5,16 @@
   padding: 10px;
   margin-top: 10px;
   border: 1px solid var(--accent-color); /* Yellow Border */
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   background-color: #ffffff; /* White Background */
   color: var(--primary-color); /* Dark Blue */
-  resize: vertical; 
-  box-sizing: border-box; 
+  resize: vertical;
+  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
 }
 
 /* Heading for the meeting notes section */
-h2 {
+.meeting-notes h2 {
   color: var(--primary-color); /* Dark Blue */
 }

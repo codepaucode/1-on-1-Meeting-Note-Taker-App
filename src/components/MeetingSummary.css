@@ -14,7 +14,7 @@
 /* Button for generating and sending the meeting summary */
 .meeting-summary button {
   background-color: var(--primary-color); /* Dark Blue */
-  color: white;
+  color: #ffffff;
   padding: 10px 20px;
   border: none;
   border-radius: var(--border-radius);
@@ -38,7 +38,7 @@
 /* Container for the email form and input fields */
 .meeting-summary .form-group {
   display: flex;
-  align-items: center; 
+  align-items: center;
   gap: 10px; /* Space between the email field and the button */
 }
 
@@ -51,7 +51,7 @@
   border: 1px solid var(--accent-color); /* Yellow Border */
   background-color: #ffffff; /* White Background */
   color: var(--primary-color); /* Dark Blue */
-  resize: vertical; 
+  resize: vertical;
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
 }
@@ -63,8 +63,8 @@ input[type="email"] {
   border: 1px solid var(--accent-color); /* Yellow Border */
   background-color: #ffffff; /* White Background */
   color: var(--primary-color); /* Dark Blue */
-  height: 40px; 
-  box-sizing: border-box; 
+  height: 40px;
+  box-sizing: border-box;
   width: 200px;
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
@@ -72,8 +72,8 @@ input[type="email"] {
 
 /* Styling for the button in the email form */
 .form-group button {
-  padding: 10px 20px; 
-  height: 40px; 
+  padding: 10px 20px;
+  height: 40px;
   font-family: 'Inter', sans-serif;
   font-size: var(--body-font-size);
   width: 150px;

@@ -52,7 +52,7 @@
 /* Button for saving goals */
 .save-goals-button {
   background-color: var(--secondary-color); /* Light Blue */
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 10px;
   border-radius: var(--border-radius);

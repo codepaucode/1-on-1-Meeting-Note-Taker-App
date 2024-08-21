@@ -19,7 +19,7 @@
 /* Left sidebar styling */
 .left-sidebar {
   width: 250px;
-  background-color: #023047;
+  background-color: var(--primary-color); /* Dark Blue */
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -36,7 +36,7 @@
 /* Right sidebar styling */
 .right-sidebar {
   width: 250px;
-  background-color: #023047;
+  background-color: var(--primary-color); /* Dark Blue */
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -83,9 +83,9 @@ input[type="date"] {
 
 /* Button for deleting a meeting */
 .delete-meeting-button {
-  background-color: #fb8500;
+  background-color: #fb8500; /* Orange Background */
   width: 150px;
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
@@ -94,13 +94,13 @@ input[type="date"] {
 
 /* Hover state for the delete button */
 .delete-meeting-button:hover {
-  background-color: #c0392b;
+  background-color: #c0392b; /* Red Background on Hover */
 }
 
 /* Button for saving a meeting */
 .save-meeting-button {
   background-color: var(--primary-color); /* Dark Blue */
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 10px;
   border-radius: var(--border-radius);
@@ -135,5 +135,5 @@ input[type="date"] {
   margin-top: 50px;
   padding: 10px 0;
   color: #ffffff;
-  border-top: 1px solid #8ecae6;
+  border-top: 1px solid var(--secondary-color);
 }

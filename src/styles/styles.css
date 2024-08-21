@@ -1,7 +1,7 @@
 /* Basic styling for the body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #8ecae6; /* Light Blue Background */
+  background-color: var(--secondary-color); /* Light Blue Background */
   color: #333;
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ body {
   width: 250px;
   height: 100%;
   background-color: #023047; /* Dark Blue */
-  color: #fff;
+  color: #ffffff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box; /* Ensure padding doesn't add to the width */
