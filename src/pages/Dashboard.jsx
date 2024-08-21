@@ -6,6 +6,7 @@ import MeetingSummary from "../components/MeetingSummary";
 import MeetingTemplate from "../components/MeetingTemplate"; 
 import Sidebar from "../components/Sidebar"; 
 import GoalsSidebar from "../components/GoalsSidebar"; 
+import IntroductionModal from "../components/IntroductionModal"; 
 import { saveMeetingData, loadMeetingData, deleteMeetingData, saveGoalsData, loadGoalsData } from "../services/firebase"; 
 import { useMeetingContext } from "../context/MeetingContext"; 
 import './Dashboard.css'; 
@@ -22,6 +23,7 @@ const Dashboard = () => {
     summary: '',
   });
   const [unsavedChanges, setUnsavedChanges] = useState(false); 
+  const [isModalOpen, setIsModalOpen] = useState(true); // State for controlling the modal
 
   const [longTermGoals, setLongTermGoals] = useState(''); 
   const [shortTermGoals, setShortTermGoals] = useState(''); 
@@ -142,6 +144,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
+      <IntroductionModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} /> {/* Introduction Modal */}
       <Sidebar
         savedMeetings={savedMeetings} 
         onDateClick={(date) => {
